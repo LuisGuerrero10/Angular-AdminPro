@@ -1,0 +1,39 @@
+.error-box {
+    height: calc(100% - 120px);
+    position: fixed;
+    background: url(../../../assets/images/background/error-bg.jpg) no-repeat center center #fff;
+    background-size: cover;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    z-index: 0;
+  }
+  
+  .error-box .error-body {
+    /* padding-top: 2%; */
+    margin-bottom: 30px; /* Ajusta el margen inferior */
+  }
+  
+  .error-body h1 {
+    font-size: 210px;
+    font-weight: 900;
+    text-shadow: 4px 4px 0 #ffffff, 6px 6px 0 #263238;
+    line-height: 210px;
+  }
+  
+  .error-box .error-body .btn {
+    margin-top: 0;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+    z-index: 1;
+  }
+  
