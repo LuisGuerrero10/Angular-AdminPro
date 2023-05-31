@@ -1,28 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Graphica1Component } from './pages/graphica1/graphica1.component';
-import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
-import { PagesComponent } from './pages/pages.component';
+import { PagesRoutingModule } from './pages/pages.routing';
+
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+import { AuthRoutingModule } from './auth/auth.routing';
 
 const routes: Routes = [
 
-  {
-    path:'',
-    component: PagesComponent,
-    children: [
-      {path:'dashboard', component: DashboardComponent},
-      {path:'progress', component: ProgressComponent},
-      {path:'graphica1', component: Graphica1Component},
-      {path:'', redirectTo: '/dashboard', pathMatch: 'full'},
-    ]
-  },
-  {path:'login', component: LoginComponent},
-  {path:'register', component: RegisterComponent},
-
+  // path: '/dashboard' PagesRouting
+  // path: '/auth' AuthRouting
+  {path:'', redirectTo: '/dashboard', pathMatch: 'full'},
   {path:'**', component: NopagefoundComponent},
 
 ]
@@ -30,7 +17,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    PagesRoutingModule,
+    AuthRoutingModule
   ],
   exports: [RouterModule]
 })
