@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from "@angular/forms";
+import { ComponentModule } from '../components/component.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { Graphica1Component } from './graphica1/graphica1.component';
 import { ProgressComponent } from './progress/progress.component';
-import { SharedModule } from '../shared/shared.module';
 
 const PAGES_COMPONENT = [
   DashboardComponent,
@@ -24,8 +26,10 @@ const PAGES_COMPONENT = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     SharedModule,
     RouterModule,
+    ComponentModule
   ]
 })
 export class PagesModule { }
