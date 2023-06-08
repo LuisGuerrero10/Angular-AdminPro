@@ -9,12 +9,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { Graphica1Component } from './graphica1/graphica1.component';
 import { ProgressComponent } from './progress/progress.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 const PAGES_COMPONENT = [
   DashboardComponent,
   ProgressComponent,
   Graphica1Component,
   PagesComponent,
+  AccountSettingsComponent
 ];
 
 @NgModule({
