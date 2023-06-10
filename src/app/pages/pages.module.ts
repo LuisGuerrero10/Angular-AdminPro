@@ -10,18 +10,22 @@ import { PagesComponent } from './pages.component';
 import { Graphica1Component } from './graphica1/graphica1.component';
 import { ProgressComponent } from './progress/progress.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const PAGES_COMPONENT = [
   DashboardComponent,
   ProgressComponent,
   Graphica1Component,
   PagesComponent,
-  AccountSettingsComponent
+  AccountSettingsComponent,
+  PromisesComponent,
+  RxjsComponent,
 ];
 
 @NgModule({
   declarations: [
-    PAGES_COMPONENT
+    PAGES_COMPONENT,
   ],
   exports: [
     PAGES_COMPONENT
